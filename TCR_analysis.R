@@ -1,4 +1,6 @@
 #CD4 COVID-19 TCR analysis. 
+#edit this path to point to your conga tcrdist cpp distribution
+path_tcrdist="../conga/tcrdist_cpp/"
 
 skip_lookup_generation=T # skip lookup table generation which takes a lot of time and requires full download of Emerson et al and Snyder et al cohorts and load precomputed version from file instead. 
 

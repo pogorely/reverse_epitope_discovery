@@ -133,9 +133,9 @@ do_mira1<-function(df,mira_df,peptide_df){
 
 
 #R_TCRdist call.
-path_cpp="../conga/tcrdist_cpp/bin/find_neighbors"
-db_path="../conga/tcrdist_cpp/db/tcrdist_info_human.txt"
-perm<-readLines("../conga/tcrdist_cpp/db/tcrdist_info_human.txt")
+path_cpp=paste0(path_tcrdist,"bin/find_neighbors",collapse = "")
+db_path=paste0(path_tcrdist,"/db/tcrdist_info_human.txt",collapse = "")
+perm<-readLines(paste0(path_tcrdist,"/db/tcrdist_info_human.txt",collapse = ""))
 permv<-c(unique(gsub("VBdist ","",sapply(strsplit(perm[grepl("VBdist",perm)],"*",fixed=T),"[[",1))),unique(gsub("VAdist ","",sapply(strsplit(perm[grepl("VAdist",perm)],"*",fixed=T),"[[",1))))
 out_pref="tmp"
 library(igraph)
